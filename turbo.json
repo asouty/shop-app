@@ -1,0 +1,21 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "frontend#build": {
+      "dependsOn": ["backend#build"]
+    },
+    "dev": {
+      "cache": false
+    },
+    "build": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "dist/**"
+      ]
+    }
+  },
+  "globalDependencies": [".env"],
+  "globalEnv": ["POSTGRES_HOST","POSTGRES_PORT","POSTGRES_USER","POSTGRES_PASSWORD","POSTGRES_DATABASE","PORT","MODE","JWT_SECRET"]
+}

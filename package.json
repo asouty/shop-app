@@ -1,0 +1,32 @@
+{
+  "name": "curriculum-vitae-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "dotenv -- turbo run dev",
+    "build": "turbo run build",
+    "start": "node apps/backend/dist/main",
+    "format": "prettier-eslint --write \"{,!(node_modules)/**/}*.{ts,tsx}\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "workspaces": [
+    "apps/*"
+  ],
+  "devDependencies": {
+    "dotenv-cli": "^7.3.0",
+    "turbo": "^2.0.4",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "@babel/eslint-parser": "^7.24.7",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "prettier": "^3.3.2",
+    "prettier-eslint-cli": "^8.0.1"
+  },
+  "packageManager": "npm@10.7.0"
+}
